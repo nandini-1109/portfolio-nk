@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,7 +19,22 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'serif': ['DM Serif Display', 'serif'],
+				'sans': ['Inter', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'monospace'],
+			},
 			colors: {
+				// Cyberpunk color palette
+				'cyber-black': '#0D0D0D',
+				'neon-purple': '#B593FF',
+				'electric-cyan': '#00E0FF',
+				'cyber-white': '#FFFFFF',
+				'cyber-gray': '#1A1A1A',
+				'dark-purple': '#6B46C1',
+				'glow-purple': 'rgba(181, 147, 255, 0.3)',
+				'glow-cyan': 'rgba(0, 224, 255, 0.3)',
+				
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +100,53 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(181, 147, 255, 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px rgba(181, 147, 255, 0.8)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(50px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'slide-up': 'slide-up 0.6s ease-out',
+				'fade-in': 'fade-in 0.8s ease-out'
+			},
+			backgroundImage: {
+				'cyber-gradient': 'linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 50%, #0D0D0D 100%)',
+				'neon-gradient': 'linear-gradient(135deg, #B593FF 0%, #00E0FF 100%)',
 			}
 		}
 	},
