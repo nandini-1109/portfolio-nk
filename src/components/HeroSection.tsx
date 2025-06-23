@@ -52,22 +52,28 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Hero artwork */}
+          {/* Right side - Profile Image */}
           <div className="relative flex justify-center items-center">
             <div className="relative w-full max-w-md aspect-square">
-              {/* Main character silhouette */}
+              {/* Glow background */}
               <div className="absolute inset-0 bg-gradient-to-br from-neon-purple/20 to-electric-cyan/20 rounded-full blur-3xl animate-glow-pulse"></div>
               
-              {/* Placeholder for the anime-style coder illustration */}
-              <div className="relative z-10 w-full h-full bg-gradient-to-br from-cyber-gray to-cyber-black rounded-2xl border border-neon-purple/30 flex items-center justify-center neon-border">
-                <div className="text-center space-y-4">
-                  <div className="w-32 h-32 mx-auto bg-gradient-to-br from-neon-purple to-electric-cyan rounded-full flex items-center justify-center animate-float">
-                    <span className="text-4xl font-serif font-bold text-cyber-black">NK</span>
-                  </div>
-                  <div className="text-sm font-mono text-gray-400">
-                    // Anime-style coder illustration
-                    <br />
-                    // Coming soon...
+              {/* Profile Image Container */}
+              <div className="relative z-10 w-full h-full rounded-2xl border border-neon-purple/30 neon-border overflow-hidden">
+                <img 
+                  src="/lovable-uploads/a0b8946f-7c53-4860-8cd1-4b9140c7ef2b.png"
+                  alt="Nandini Kaushik - Profile"
+                  className="w-full h-full object-cover object-center"
+                />
+                
+                {/* Overlay for cyberpunk effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-cyber-black/40 via-transparent to-transparent"></div>
+                
+                {/* Name overlay at bottom */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-cyber-black/80 backdrop-blur-md rounded-lg p-3 border border-neon-purple/30">
+                    <div className="text-neon-purple font-serif font-bold text-lg">Nandini Kaushik</div>
+                    <div className="text-electric-cyan font-mono text-sm">CSE Student & Designer</div>
                   </div>
                 </div>
               </div>

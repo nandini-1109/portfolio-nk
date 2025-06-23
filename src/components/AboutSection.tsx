@@ -6,25 +6,30 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-cyber-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Profile silhouette */}
+          {/* Left side - Profile Image */}
           <div className="relative flex justify-center">
             <div className="relative w-80 h-96">
-              {/* Silhouette background */}
+              {/* Background glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-neon-purple/10 to-electric-cyan/10 rounded-3xl backdrop-blur-sm border border-neon-purple/20"></div>
               
-              {/* Profile silhouette placeholder */}
-              <div className="relative z-10 w-full h-full flex flex-col items-center justify-center space-y-6 p-8">
-                <div className="w-32 h-32 bg-gradient-to-br from-neon-purple to-electric-cyan rounded-full flex items-center justify-center">
-                  <span className="text-3xl font-serif font-bold text-cyber-black">NK</span>
-                </div>
+              {/* Profile Image Container */}
+              <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden border border-neon-purple/30">
+                <img 
+                  src="/lovable-uploads/a0b8946f-7c53-4860-8cd1-4b9140c7ef2b.png"
+                  alt="Nandini Kaushik - About"
+                  className="w-full h-full object-cover object-center"
+                />
                 
-                <div className="text-center space-y-2">
-                  <h3 className="text-xl font-serif text-neon-purple">Profile</h3>
-                  <p className="text-sm font-mono text-gray-400">
-                    // Silhouette art placeholder
-                    <br />
-                    // Cyberpunk aesthetic
-                  </p>
+                {/* Cyberpunk overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-cyber-black/60 via-transparent to-transparent"></div>
+                
+                {/* Bottom info panel */}
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-cyber-black/80 backdrop-blur-md rounded-lg p-4 border border-electric-cyan/30">
+                    <h3 className="text-lg font-serif text-neon-purple mb-1">Nandini Kaushik</h3>
+                    <p className="text-sm font-mono text-electric-cyan">B.Tech CSE Student</p>
+                    <p className="text-xs text-gray-400 mt-1">JUET Guna</p>
+                  </div>
                 </div>
               </div>
 
